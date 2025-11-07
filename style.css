@@ -371,6 +371,33 @@ body {
             transform: translateY(7.2vw) rotateX(65deg) rotate(45deg) scale(.2);
             z-index: -1;
 
+            button {
+                grid-column: 1/15;
+                grid-row: 14/15;
+                height: 100%;
+                width: 100%;
+                
+                font-family: ShantellSans, sans-serif;
+                font-size: var(--step-4);
+                color: var(--off-white);
+                background: transparent;
+                border: none;
+                text-align: left;
+
+                transform-origin: top;
+
+                transform: translateY(calc(var(--l)*.1)) translateZ(calc(var(--l)*-.1));
+
+                &::after {
+                    content: "Click Me!!";
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(90deg, var(--background-color-darker2), var(--background-color-darker));
+                    opacity: 0.7;
+                    z-index: -1;
+                }
+            }
+
 
             .counter1, .counter2, .fridge, .chair, .chair2, .chair3, .board, .bread, .slice {
                 grid-row: 6 / 15;
